@@ -21,7 +21,10 @@ def packaging_brute_force_aux(position, objects, bins, min_bins):
             packaging_brute_force_aux(position+1, objects, bins, min_bins)
             bins[i].remove(objects[position])
 
-    bins.append([objects[position]])
+    if bins[len(bins)-1]:
+        bins.append([objects[position]])  
+    else:
+        bins[len(bins)-1].append(objects[position]) 
+
     packaging_brute_force_aux(position+1, objects, bins, min_bins)
     bins.pop()
-

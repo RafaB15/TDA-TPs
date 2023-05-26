@@ -21,9 +21,14 @@ def packaging_backtracking_aux(position, objects, bins, min_bins):
             packaging_backtracking_aux(position+1, objects, bins, min_bins)
             bins[i].remove(objects[position])
 
-    if len(bins) < min_bins[0]:
-        bins.append([objects[position]])
-        packaging_backtracking_aux(position+1, objects, bins, min_bins)
-        bins.pop()
+    if len(bins) >= min_bins[0]:
+        return
+    
+    if bins[len(bins)-1]:
+        bins.append([objects[position]])  
+    else:
+        bins[len(bins)-1].append(objects[position]) 
+    packaging_backtracking_aux(position+1, objects, bins, min_bins)
+    bins.pop()
 
 
