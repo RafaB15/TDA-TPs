@@ -1,7 +1,6 @@
 MAX_BIN_SIZE = 1
 
-def packaging_aproximation(objects):
-
+def next_fit(objects):
     bins = []
     i = 0
     while i < len(objects):

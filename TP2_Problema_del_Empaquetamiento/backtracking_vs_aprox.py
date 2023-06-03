@@ -1,5 +1,5 @@
-from backtracking_final import packaging_backtracking
-from packaging_aproximation import packaging_aproximation
+from packaging_backtracking import packaging_backtracking
+from packaging_aproximation_next_fit import nex_fit
 import time 
 import matplotlib.pyplot as plt
 
@@ -34,7 +34,7 @@ def main():
                 print("Currently testing amount_{}_version_{}.txt".format(i, j))
 
                 time_backtracking, result_backtracking = time_meassure(objects, packaging_backtracking)
-                time_aprox, result_aprox = time_meassure(objects, packaging_aproximation)
+                time_aprox, result_aprox = time_meassure(objects, nex_fit)
 
                 current_times_backtracking.append(time_backtracking)
                 current_times_aprox.append(time_aprox)
