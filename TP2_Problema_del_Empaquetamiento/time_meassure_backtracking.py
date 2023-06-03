@@ -1,4 +1,4 @@
-from backtracking_final import packaging_backtracking
+from packaging_backtracking import packaging_backtracking
 import time 
 import matplotlib.pyplot as plt
 
@@ -27,7 +27,7 @@ def main():
     plt.title("Tiempo de ejecución del algoritmo de backtracking \nal aumentar la cantidad de objetos")
     plt.xlabel("Cantidad de objetos")
     plt.ylabel("Tiempo de ejecución promedio (ms)")
-    plt.plot(amounts,times)
+    plt.plot(amounts,times, marker='o')
     plt.show()
 
 main()

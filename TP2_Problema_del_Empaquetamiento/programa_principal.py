@@ -1,6 +1,6 @@
 from packaging_backtracking_new_version import packaging_problem_backtracking
-from packaging_aproximation import packaging_aproximation
-from packaging_alternate_aproximation import first_fit
+from packaging_aproximation_next_fit import packaging_aproximation
+from packaging_aproximation_first_fit import first_fit
 
 
 import sys
