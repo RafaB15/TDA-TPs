@@ -4,6 +4,7 @@ ERROR = -1
 
 def packaging_greedy(objects):
     objects.sort(reverse=True) 
+    
     bins = [] 
 
     for object in objects:
