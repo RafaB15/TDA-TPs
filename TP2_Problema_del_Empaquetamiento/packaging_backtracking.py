@@ -12,7 +12,6 @@ def packaging_backtracking_aux(position, objects, bins, min_bins):
     if position == size:
         if(len(bins) < min_bins[0]):
             min_bins[0] = len(bins)
-        print(bins)
         return
     
     for i in range(len(bins)):
@@ -31,4 +30,5 @@ def packaging_backtracking_aux(position, objects, bins, min_bins):
     packaging_backtracking_aux(position+1, objects, bins, min_bins)
     bins.pop()
 
-
+objects = [0.4, 0.6, 0.2, 0.6, 0.1, 0.9, 0.12, 0.87, 0.65, 0.41, 0.1, 0.9, 0.12, 0.87, 0.65, 0.41]
+print(packaging_backtracking(objects))
