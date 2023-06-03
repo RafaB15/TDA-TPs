@@ -31,6 +31,7 @@ def main():
         bins = first_fit(objects, 1)
         print("Solución Aproximada Alumnos: #" + str(bins))
 
+
     print(read_file(arguments[2]))
 
 main()
