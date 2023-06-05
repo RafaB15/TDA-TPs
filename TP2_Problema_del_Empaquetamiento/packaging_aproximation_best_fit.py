@@ -2,7 +2,7 @@ MAX_BIN_SIZE = 1
 INFINITY = 10000000000000000000000000000
 ERROR = -1
 
-def packaging_greedy(objects):
+def best_fit(objects):
     objects.sort(reverse=True) 
     
     bins = [] 
@@ -21,4 +21,4 @@ def packaging_greedy(objects):
         else:
             bins.append([object])
 
-    return bins
+    return len(bins)

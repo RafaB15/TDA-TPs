@@ -1,6 +1,7 @@
 MAX_BIN_SIZE = 1
 
 def next_fit(objects):
+    objects.sort(reverse=True) 
     bins = []
     i = 0
     while i < len(objects):

@@ -4,7 +4,8 @@ MAX_BIN_SIZE = 1
 
 def packaging_backtracking(objects):
     bins = []
-    min_bins = first_fit(objects, 1)
+    min_bins = first_fit(objects)
+    objects.sort(reverse=True)
     min_bins = packaging_backtracking_aux(0, objects, bins, min_bins)
     return min_bins
 

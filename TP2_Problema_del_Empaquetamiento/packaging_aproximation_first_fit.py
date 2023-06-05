@@ -1,4 +1,5 @@
 def first_fit(objects):
+    objects.sort(reverse=True) 
     bins = []
     for item in objects:
         for i in range(len(bins)):
